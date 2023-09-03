@@ -25,3 +25,12 @@ Supplier - T get() // return an instance of something without taking any paramet
 UnaryOperator<T> - T apply(T t) // returns the result of type same as argument.
 BinaryOperator<T> - T apply(T t1, T t2) // returns the result of same type as arguments, but takes 2 arguments.
 ```
+
+## METHOD REFERENCES
+
+- Method references are used in place of lambda expressions. 
+- Method references can be used in these scenarios:
+- static method - ```(p1, p2) -> p1 + p2 - Integer::sum```
+- Instance methods - ```p1 -> System.out.println(p1) - System.out::println```
+- Instance methods of an arbitrary objects - ```(p1, p2) -> p1.concat(p2 - String::concat```
+- Constructor - ```() -> new LPAStudent - LPAStudent::new```
