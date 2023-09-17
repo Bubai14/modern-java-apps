@@ -40,3 +40,15 @@ public record Person(String name, String dob) {}
 Person {
 }
 ```
+
+### Sealed Classes
+
+- Sealed classed (from JDK 17) allows to lock the extensibility/inhertance of the classes/interfaces.
+- The sealed classes has to be declared with keyword ```sealed```. The class/interface to be provided the names of subclasses or interfaces which will extend/implement it.
+```aidl
+public sealed abstract class SealedClass permits ChildFinalClass, ChildNonSealedClass
+```
+- The subclasses of the sealed class has to be declared with ```sealed, non-sealed or final``` keyword.
+- sealed - Allows only permitted class to inherit it.
+- non-sealed - Allows all type of class to inherit it. Use it to break the lock of sealed class for some of the sub class.
+- final - Class which cannot be subclassed.
