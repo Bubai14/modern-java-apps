@@ -27,3 +27,16 @@ Collections.unmodifiableNavigableMap
 Collections.unmodifiableSortableMap
 ```
 - The above methods will reflect the changes of the original collect even after the copy was made.
+### Record
+- Records are implicitly final classes.
+- The arguments passed in the record classes are implicitly final.
+```aidl
+public record Person(String name, String dob) {}
+```
+- Records support two types of constructors:
+- Canonical constructor - Which is called after the arguments passed to the record are initialized.
+- Constant constructor - Which is called before the arguments passed to the record are initialized. This constructor does not need any argument
+```aidl
+Person {
+}
+```
